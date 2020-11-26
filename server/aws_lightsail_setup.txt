@@ -1,0 +1,7 @@
+// redirect ports
+
+sudo vi /opt/bitnami/apache2/conf/bitnami/bitnami-apps-prefix.conf
+
+//restart apache server
+
+sudo /opt/bitnami/ctlscript.sh restart apache

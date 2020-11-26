@@ -1,0 +1,33 @@
+
+
+GUIDE FOR ANDROID DEVELOPER
+--------------------------------------------------------------------------
+App should contain the following activities.
+	1) Login activity
+	2) Register activity
+	3) Game activity(should contain a dynamic user dashboard)
+	4) Recharge activity
+	5) withdraw activity
+	6) order history activity
+	
+-> APP starts off with login activity
+-> user places the credentials and sends a http request to "/api/login"
+-> It responds with a secret token if valid credentials
+-> We need to store this token in memory through out the process runtime
+
+->	APP then proceeds to the game activity, this is where all the game data is displayed
+->  To place a bet on the current item we need to query bet_id at "/api/current_item_id"
+->	We can update the timer by querying "/api/get_timer"
+->	Query user balance at "/api/balance"
+->	In a specified time-slot user places a bet at "/api/order"
+->	After collecting all the valid requests server processes them and declares a winner and updates the database(expected time < 500ms for 10k users)
+->	User can view all his orders at "/api/myorders"(In a new layout)
+
+
+
+SOME GOOD PRACTICES:
+-------------------------------------------------------------------------------
+->	Store user authentication token in a global static variable
+->	In the beginning create a coroutine(using threads) which updates 'timer' and 'balance' at regular intervals (or) whenever a new request is made
+->	please define clear-cut procedures for every thing.
+->	USE APPROPRIATE VARIABLE NAMES!

@@ -1,0 +1,22 @@
+
+=> Implement password hashing using bcrypt
+
+=> clean up the database and rename everything appropriately(done)
+
+=> Implement a dropdown status bar in frontend client(done)
+
+=> implement a script to process pending orders asynchronously
+
+=> implement payment endpoints
+
+=> optimise client requests
+
+=> implement registration form and otp validation using sms gateways(msg91 recommended)
+
+=> improve client UI and UX
+
+=> implemet security features like change password,name etc 
+
+=> optimise database size & queries if possible
+
+=> recheck order limit
